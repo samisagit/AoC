@@ -55,7 +55,7 @@
 	      pkgs.ghcid
             ];
             text = ''
-	    ghcid -c "cabal repl aoc-test"
+	    ghcid -c "cabal repl aoc"
 	    '';
           };
         in {
