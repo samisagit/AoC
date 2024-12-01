@@ -1,0 +1,34 @@
+cabal-version:      3.4
+name:               aoc
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             samisagit
+maintainer:         sam@whiteteam.co.uk
+category:           Data
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   lib
+    build-depends:    base ^>=4.18.2.1,
+    exposed-modules:    DayOne.A
+    build-tool-depends: hspec-discover:hspec-discover
+
+test-suite aoc-test
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    build-depends:    base ^>=4.18.2.1,
+                      aoc,
+                      hspec,
+    other-modules:    DayOneSpec
+    build-tool-depends: hspec-discover:hspec-discover
