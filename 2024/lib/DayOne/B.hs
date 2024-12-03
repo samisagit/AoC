@@ -4,9 +4,8 @@ import           Data.List
 
 similarity :: String -> Int
 similarity = sum
-             .(\(xs, ys) -> map (\x -> x * (length $ (filter (== x) ys))) xs)
+             .(\(xs, ys) -> map (\x -> x * length (filter (== x) ys)) xs)
              . (\xs -> (head xs, last xs))
              . transpose
-             . map (map read)
-             . map words
+             . map (map read . words)
              . lines
