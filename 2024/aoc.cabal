@@ -22,6 +22,9 @@ library
                         DayOne.B,
                         DayTwo.A,
                         DayTwo.B,
+                        DayThree.A,
+                        DayThree.B,
+    other-modules:      Lib.Parser,
     build-tool-depends: hspec-discover:hspec-discover
 
 test-suite aoc-test
@@ -35,4 +38,5 @@ test-suite aoc-test
                       hspec,
     other-modules:    DayOneSpec,
                       DayTwoSpec,
+                      DayThreeSpec,
     build-tool-depends: hspec-discover:hspec-discover
