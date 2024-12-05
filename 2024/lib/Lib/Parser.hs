@@ -82,6 +82,7 @@ charIn opts = Parser charP
 space :: Parser Char
 space = char ' '
 
+ss :: Parser String
 ss = some space
 
 string :: String -> Parser String
